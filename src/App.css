@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,29 @@
   to {
     transform: rotate(360deg);
   }
+} */
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #0d47a1);
+  color: #0d47a1;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(13,71,161,0.8);
+}
+
+a:hover {
+  opacity: 0.8;
 }
