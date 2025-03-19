@@ -1,9 +1,13 @@
 .navbar {
-  position: fixed;
+  background-color: rgba(243, 156, 18, 0.8); /* Напівпрозорий жовтогарячий фон */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Фіксуємо хедер зверху */
   top: 0;
-  width: 100%;
-  background: rgba(13, 71, 161, 0.8); /* напівпрозорий синій */
-  padding: 10px 20px;
+  width: calc(100% - 60px); /* Враховуємо відступи */
   z-index: 1000;
   backdrop-filter: blur(5px);
 }
@@ -19,30 +23,31 @@
 
 /* Логотип */
 .navbar-logo {
-  color: #d35400; /* Темно-жовтогарячий колір */
-  font-size: 28px; /* Збільшений розмір шрифту */
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 0; /* Переміщуємо в лівий край */
   font-family: 'Georgia', serif; /* Красивий напіввигнутий шрифт */
-  font-weight: 600; /* Напівжирний стиль */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Легкий тіньовий ефект */
 }
 
 /* Меню */
 .navbar-menu {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .navbar-item {
   color: white;
   font-size: 16px;
+  transition: color 0.3s ease;
   padding: 5px 10px;
-  transition: color 0.3s;
   white-space: nowrap; /* не переносити текст */
 }
 
 .navbar-item:hover {
-  color: #bbdefb;
+  color: #fef9e7; /* Світліший жовтогарячий */
 }
 
 /* Блок із кнопками */

@@ -8,33 +8,40 @@ function PropertyCard({ property }) {
         pathname: `/property/${property.id}`,
         state: {
           property,
-          previewImage: property.image, // Передаємо URL зображення
+          previewImage: property.image,
         },
       }}
       style={{
-        textDecoration: "none", // Прибираємо підкреслення
-        color: "inherit", // Зберігаємо колір тексту
+        textDecoration: "none",
+        color: "inherit",
       }}
     >
       <div
         style={{
-          background: "linear-gradient(135deg, #ffffff, #bbdefb)",
-          padding: "15px",
-          borderRadius: "10px",
-          boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-          margin: "10px",
-          transition: "transform 0.3s",
+          background: "white",
+          padding: "20px",
+          borderRadius: "15px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          margin: "15px",
+          transition: "transform 0.3s ease",
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
+        onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
         onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
         <img
           src={property.image}
           alt={property.title}
-          style={{ width: "100%", borderRadius: "10px" }}
+          style={{
+            width: "100%",
+            borderRadius: "10px",
+            marginBottom: "15px",
+          }}
         />
-        <h2 style={{ color: "#0d47a1" }}>{property.title}</h2>
-        <p>{property.price}</p>
+        <h2 style={{ color: "#d35400", marginBottom: "10px" }}>
+          {property.title}
+        </h2>
+        <p style={{ color: "#555", marginBottom: "10px" }}>{property.price}</p>
+        <button style={{ width: "100%" }}>View Details</button>
       </div>
     </Link>
   );
