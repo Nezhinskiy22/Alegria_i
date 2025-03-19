@@ -1,0 +1,71 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(13, 71, 161, 0.8); /* напівпрозорий синій */
+  padding: 10px 20px;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif; /* привабливий шрифт */
+  max-width: 1200px; /* обмежуємо ширину контейнера */
+  margin: 0 auto; /* вирівнювання по центру */
+}
+
+/* Логотип */
+.navbar-logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Меню */
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-item {
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  white-space: nowrap; /* не переносити текст */
+}
+
+.navbar-item:hover {
+  color: #bbdefb;
+}
+
+/* Блок із кнопками */
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px; /* трохи зрушуємо кнопки лівіше */
+}
+
+.btn {
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #0d47a1;
+}

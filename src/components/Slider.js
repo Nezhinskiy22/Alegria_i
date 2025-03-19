@@ -1,6 +1,27 @@
 import React, { useState } from "react";
 
-function Slider({ items }) {
+const Slider = ({
+  items = [
+    {
+      id: "1",
+      title: "Luxury Villa",
+      price: "$1,200,000",
+      image: "https://picsum.photos/1500/800?random=1",
+    },
+    {
+      id: "2",
+      title: "Modern Apartment",
+      price: "$850,000",
+      image: "https://picsum.photos/1500/800?random=2",
+    },
+    {
+      id: "3",
+      title: "Cozy Cottage",
+      price: "$450,000",
+      image: "https://picsum.photos/1500/800?random=3",
+    },
+  ],
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -17,7 +38,7 @@ function Slider({ items }) {
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "35vh",
+        height: "100%",
       }}
     >
       {items.map((item, index) => (
@@ -26,7 +47,7 @@ function Slider({ items }) {
           style={{
             display: index === currentIndex ? "block" : "none",
             width: "100%",
-            height: "35vh",
+            height: "100%",
             backgroundImage: `linear-gradient(rgba(255,255,255,0.3), rgba(13,71,161,0.3)), url(${item.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -82,6 +103,6 @@ function Slider({ items }) {
       </button>
     </div>
   );
-}
+};
 
 export default Slider;

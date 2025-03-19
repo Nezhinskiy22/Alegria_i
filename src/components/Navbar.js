@@ -1,33 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav style={{ backgroundColor: "#0d47a1", padding: "15px" }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ color: "white", margin: 0 }}>Real Estate</h1>
-        <div>
-          <Link to="/" style={{ color: "white", marginRight: "15px" }}>
+    <header className="navbar">
+      <div className="navbar-content">
+        <h1 className="navbar-logo">Real Estate</h1>
+        <nav className="navbar-menu">
+          <Link className="navbar-item" to="/">
             Home
           </Link>
-          <Link to="/about" style={{ color: "white", marginRight: "15px" }}>
+          <Link className="navbar-item" to="/about">
             About
           </Link>
-          <Link to="/blog" style={{ color: "white", marginRight: "15px" }}>
+          <Link className="navbar-item" to="/blog">
             Blog
           </Link>
-          <Link to="/contact" style={{ color: "white" }}>
+          <Link className="navbar-item" to="/contact">
             Contact
           </Link>
+        </nav>
+        <div className="navbar-buttons">
+          <button className="btn">Sign In</button>
+          <button className="btn btn-primary">Sign Up</button>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 
