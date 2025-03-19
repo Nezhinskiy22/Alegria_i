@@ -19,10 +19,11 @@
 
 /* Логотип */
 .navbar-logo {
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0;
+  color: #d35400; /* Темно-жовтогарячий колір */
+  font-size: 28px; /* Збільшений розмір шрифту */
+  font-family: 'Georgia', serif; /* Красивий напіввигнутий шрифт */
+  font-weight: 600; /* Напівжирний стиль */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Легкий тіньовий ефект */
 }
 
 /* Меню */

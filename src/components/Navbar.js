@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-content">
-        <h1 className="navbar-logo">Real Estate</h1>
+        <h1 className="navbar-logo">Casas en España</h1> {/* Змінено текст */}
         <nav className="navbar-menu">
           <Link className="navbar-item" to="/">
             Home
