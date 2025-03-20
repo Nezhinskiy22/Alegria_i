@@ -5,7 +5,7 @@ function PropertyCard({ property }) {
   return (
     <Link
       to={{
-        pathname: `/property/${property.id}`,
+        pathname: `/property/${property._id}`,
         state: {
           property,
           previewImage: property.image,

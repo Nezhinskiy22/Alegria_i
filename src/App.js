@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Property from "./pages/Property";
+import PropertyList from "./components/PropertyList";
+import PropertyDetails from "./components/PropertyDetails";
 import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -16,7 +17,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/property/:id" element={<Property />} />
+        <Route path="/properties" element={<PropertyList />} />
+        <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
