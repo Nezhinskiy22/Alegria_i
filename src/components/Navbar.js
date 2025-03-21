@@ -5,8 +5,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <header className="navbar">
-      <h1 className="navbar-logo">Casas en España</h1>{" "}
-      {/* Переміщено в лівий край */}
+      <h1 className="navbar-logo">Casas en España</h1>
       <nav className="navbar-menu">
         <Link className="navbar-item" to="/">
           Home

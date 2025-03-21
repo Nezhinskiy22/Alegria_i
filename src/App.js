@@ -9,22 +9,26 @@ import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
-import Contact from "./pages/Contact";
+import Contacts from "./pages/Contacts"; // Використовуємо Contacts
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<PropertyList />} />
-        <Route path="/property/:id" element={<PropertyDetails />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div style={{ marginTop: "60px" }}>
+        {" "}
+        {/* Відступ для фіксованого Navbar */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/properties" element={<PropertyList />} />
+          <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contacts />} /> {/* Виправлено */}
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );
