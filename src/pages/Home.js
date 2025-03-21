@@ -6,7 +6,7 @@ import "./Home.css";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(12); // Відображаємо 12 карток
 
   useEffect(() => {
     const fetchProperties = async () => {
@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 10);
+    setVisibleCount((prev) => prev + 12); // Завантажуємо ще 12 карток
   };
 
   return (

@@ -1,0 +1,93 @@
+.about-container {
+  padding: 60px 20px; /* Збільшено відступи для більш професійного вигляду */
+  background-color: #f7f7f7;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+.about-title {
+  font-size: 2.8rem; /* Збільшено розмір заголовка */
+  color: #d35400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 50px; /* Збільшено відступ для кращого розділення */
+  line-height: 1.8; /* Покращено читабельність */
+}
+
+.managers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Збільшено відступи між картками */
+  justify-content: center;
+}
+
+.manager-card {
+  background: white;
+  border-radius: 15px; /* Більш округлі кути для сучасного вигляду */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+  padding: 25px;
+  width: 320px; /* Трохи ширші картки */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manager-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Більш виразний ефект при наведенні */
+}
+
+.manager-photo {
+  width: 120px; /* Збільшено розмір фото */
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 3px solid #d35400; /* Додано рамку для акценту */
+}
+
+.manager-name {
+  font-size: 1.6rem;
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.manager-position {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.manager-contact {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.manager-contact a {
+  color: #d35400;
+  text-decoration: none;
+}
+
+.manager-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .manager-card {
+    width: 100%; /* Картки займають всю ширину на маленьких екранах */
+  }
+
+  .about-title {
+    font-size: 2.2rem; /* Зменшено розмір заголовка */
+  }
+
+  .about-description {
+    font-size: 1rem; /* Зменшено розмір тексту */
+  }
+}

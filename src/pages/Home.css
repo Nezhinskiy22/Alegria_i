@@ -15,20 +15,77 @@
     overflow: visible;
   }
   
-  /* Використовуємо grid для карток */
+  /* Використовуємо flex для карток */
   .property-list {
-    /* Приберемо фіксовану висоту */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #ffffff, #bbdefb);
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє переносити картки на новий рядок */
+    gap: 20px; /* Відступи між картками */
+    justify-content: flex-start; /* Вирівнювання карток по лівому краю */
+    padding: 40px 20px; /* Відступи: 40px зверху і знизу, 20px з боків */
+    margin: 0 auto; /* Центрування контейнера */
+    max-width: 1200px; /* Максимальна ширина для обмеження контейнера */
   }
   
-  /* Картка займає всю доступну ширину в комірці grid */
+  /* Картка займає 1/3 від ширини контейнера на великих екранах */
   .property-card {
+    flex: 0 0 calc((100% - 40px) / 3); /* 3 картки в рядок на великих екранах */
+    aspect-ratio: 3 / 4; /* Співвідношення сторін картки */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .property-card img {
     width: 100%;
-    margin: 0;
+    height: auto;
+    object-fit: cover; /* Забезпечує, щоб зображення заповнювало контейнер */
+  }
+  
+  .property-card h2 {
+    margin: 10px 15px 5px; /* Відступи для заголовка */
+    font-size: 1rem;
+    color: #d35400;
+  }
+  
+  .property-card p {
+    margin: 0 15px 10px; /* Відступи для тексту */
+    color: #555;
+  }
+  
+  .property-card button {
+    margin: 10px 15px;
+    padding: 10px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .property-card button:hover {
+    background-color: #e67e22;
+  }
+  
+  .property-card:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+  }
+  
+  /* Адаптивність для середніх екранів */
+  @media (max-width: 768px) {
+    .property-card {
+      flex: 0 0 calc((100% - 30px) / 2); /* 2 картки в рядок */
+    }
+  }
+  
+  /* Адаптивність для маленьких екранів */
+  @media (max-width: 480px) {
+    .property-card {
+      flex: 0 0 100%; /* 1 картка в рядок */
+    }
   }
   
   /* Кнопка «Більше» – статичне розміщення зліва, під картками */
@@ -54,4 +111,3 @@
     background-color: #1565c0;
     opacity: 1;
   }
-  
